@@ -1,0 +1,29 @@
+.experienceBar{
+    display:flex;
+    align-items: center;
+}
+
+.experienceBar span{
+    font-size:1rem;
+
+}
+
+.experienceBar > div{/*pega o primeiro filho div de experience-bar*/
+    flex:1; /*Ocupa a largura máxima possivel do container*/
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gray-light);
+    margin: 0 1.5rem; /*0 cima e baixo e 1.5rem(25px) nas laterais*/
+    position: relative;
+}
+
+.experienceBar > div > div{
+    height:4px;
+    border-radius: 4px;
+    background: var(--green);
+}
+span.currentExperience{
+    position: absolute;
+    top: 12px;
+    transform:translateX(-50%); /*como ele é de position absolute, usando isso ele desloca -50% para o lado. Isto foi usado para alinhamento com a barra verde!*/
+}

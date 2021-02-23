@@ -1,0 +1,19 @@
+.container{
+    height: 100vh;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem; /*2.5 vertical e 2 horizontal*/
+
+    display:flex;
+    flex-direction:column; /*Os elementos abaixo desse .container virão um abaixo do outro. Se fosse row, viriam um ao lado do outro*/
+}
+
+.container section{
+    flex:1;/*Ocupa a largura máxima possivel do container*/
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:6.25rem;/*6.25 x 16px (tela pc) = 100px*/
+    align-content: center;
+
+}
