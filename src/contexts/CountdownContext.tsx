@@ -17,7 +17,7 @@ export function CountdownProvider({children}:CountdownProviderProps){ // esse ch
     
     const { startNewChallenge } = useContext(ChallengesContext);
 
-    const [time, setTime] = useState(0.1 * 60); //25 minutos em segundos
+    const [time, setTime] = useState(25 * 60); //25 minutos em segundos // (0.1 * 60) equivalem a 6 segundos
     const [isActive,setisActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
 
@@ -31,7 +31,7 @@ export function CountdownProvider({children}:CountdownProviderProps){ // esse ch
         clearTimeout(countdownTimeout); //Impedindo o setTimeout de funcionar
         setisActive(false); 
         setHasFinished(false);
-        setTime(0.1 * 60);
+        setTime(25 * 60);
     }
     useEffect(() =>{ //useEffect executa algo (dentro de sua arrow function passada como primeiro parâmetro) quando algo muda (algo passado como segundo parâmetro, no caso o active e o time)
         if(isActive && time>0){ //setTimeout diz que algo vai ser executado depois de um tempo, no caso, a arrow function passada como primeiro argumento e o tempo é um segundo (1000) passado como segundo argumento
